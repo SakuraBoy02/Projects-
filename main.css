@@ -167,7 +167,7 @@ gap: 20px;
 
 justify-content: center;
 align-items: center;
-padding: 10px 50px;
+padding: 20px 50px;
 }
 
 .gallery__item img {
@@ -292,7 +292,7 @@ img {
 } */
 .collection{
   height: 100vh;
-  /* background-color: #1e232e; */
+  background-color: #1e232e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -307,11 +307,11 @@ img {
   border: .2rem solid #ffbe98;
   border-radius: 25px;
   overflow: hidden;
-  /* padding: .3rem; */
+  padding: .3rem;
 }
 
 .content img{
-  width: 100%;
+  width: 99%;
   border-radius: 25px;
   border: .2rem solid #ffbe98;
 }
