@@ -108,15 +108,12 @@ ul {
 }
 
 .welcome {
-/* margin-left: 10px;
-margin-right: 10px; */
-/* margin-top: 20px; */
+
 background-image: url("./Photo/138949475_354f086c-93a6-4099-8327-9c189899d13e\ 1.png");
 border-radius: 30px;
 background-repeat:no-repeat;
 background-size: cover;
-padding-top: 40px ;
-padding-bottom: 240px ;
+padding-top: 1px ;
 }
 
 .container {
@@ -170,7 +167,7 @@ gap: 20px;
 
 justify-content: center;
 align-items: center;
-padding: 50px;
+padding: 10px 50px;
 }
 
 .gallery__item img {
@@ -273,11 +270,8 @@ img {
   vertical-align: top;
 }
 
-.slider {
-  /* display: flex;
-  justify-content: center;
-  overflow: hidden;
-  gap: 20px; */
+
+/* .slider {
   margin: 0 auto;
   width: 440px;
   height: 600px;
@@ -295,6 +289,61 @@ img {
 
 .hidden{
   display: none;
+} */
+.collection{
+  height: 100vh;
+  /* background-color: #1e232e; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.collection .content{
+  /* height: 28rem; */
+  width: 29rem;
+  color: #4c4848;
+  background-color: #ffffff;
+  border: .2rem solid #ffbe98;
+  border-radius: 25px;
+  overflow: hidden;
+  /* padding: .3rem; */
+}
+
+.content img{
+  width: 100%;
+  border-radius: 25px;
+  border: .2rem solid #ffbe98;
+}
+
+.text-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-content h1{
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-top: .6rem;
+}
+
+.text-content p{
+max-width: 22rem;
+text-align: center;
+margin: 0px;
+}
+
+.btn{
+  font-family: "Aboreto", system-ui;
+  font-size: 1rem;
+  color: #4c4848;
+  border: #ffbe98;
+  background-color: #ffbe98;
+  margin: 1rem 0;
+  cursor: pointer;
 }
 
 
