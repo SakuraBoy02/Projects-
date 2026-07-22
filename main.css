@@ -108,7 +108,7 @@ ul {
 }
 
 .welcome {
-height: 1000px;
+height: 100vh;
 background-image: url("./Photo/138949475_354f086c-93a6-4099-8327-9c189899d13e\ 1.png");
 border-radius: 30px;
 background-repeat:no-repeat;
@@ -175,14 +175,17 @@ padding-left: 170px
 }
 
 .jump-vector_container{
-  position: relative;
-  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 1000;
   opacity: 0.6;
   height: 80px;
   display: flex;
   justify-content: center;
 
   animation: jump 1.5s ease infinite;
+  
 }
 
 .gallery {
