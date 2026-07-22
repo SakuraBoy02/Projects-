@@ -108,7 +108,7 @@ ul {
 }
 
 .welcome {
-height: 100vh;
+height: 1000px;
 background-image: url("./Photo/138949475_354f086c-93a6-4099-8327-9c189899d13e\ 1.png");
 border-radius: 30px;
 background-repeat:no-repeat;
@@ -145,7 +145,6 @@ font-weight: 400;
 margin: 0;
 text-align: center;
 padding-left: 75px;
-/* width: 395px; */
 }
 
 .start__lovecon {
@@ -157,6 +156,34 @@ text-align: center;
 padding-left: 170px
 }
 
+@keyframes jump {
+  0%, 100%{
+  transform: translateY(0);
+  }
+  30%{
+  transform: translateY(-15px);
+  }
+  50%{
+  transform: translateY(0);
+  }
+  70%{
+  transform: translateY(-7px);
+  }
+  90%{
+  transform: translateY(0);
+  }
+}
+
+.jump-vector_container{
+  position: relative;
+  display: inline-block;
+  opacity: 0.6;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+
+  animation: jump 1.5s ease infinite;
+}
 
 .gallery {
 display: grid;
