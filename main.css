@@ -108,7 +108,7 @@ ul {
 }
 
 .welcome {
-
+height: 100vh;
 background-image: url("./Photo/138949475_354f086c-93a6-4099-8327-9c189899d13e\ 1.png");
 border-radius: 30px;
 background-repeat:no-repeat;
@@ -292,7 +292,7 @@ img {
 } */
 .collection{
   height: 100vh;
-  background-color: #1e232e;
+  /* background-color: #1e232e; */
   display: flex;
   justify-content: center;
   align-items: center;
