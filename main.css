@@ -108,11 +108,11 @@ ul {
 
 
 .main {
-
+  
 }
 
 .welcome {
-height: 100vh;
+height: 100%;
 /* background-image: url("./Photo/138949475_354f086c-93a6-4099-8327-9c189899d13e\ 1.png"); */
 border-radius: 30px;
 background-repeat:no-repeat;
@@ -305,12 +305,11 @@ img {
 }
 
 .collection{
-  height: 800px;
+  height: 100%;
   /* background-color: #1e232e; */
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .collection .content{
@@ -363,6 +362,6 @@ margin: 0px;
   display: flex;
   justify-content: center;
   font-size: 36px;
-  padding-top: 25px;
+  /* padding-top: 25px; */
   padding-bottom: 100px;
 }

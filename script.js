@@ -32,7 +32,7 @@
 //     })
 // });
 
-document.getElementById('btn_reapet').addEventListener('click', () => {
+document.getElementById('btn_repeat').addEventListener('click', () => {
     window.location.href = 'index.html';
 });
 var swiper = new Swiper('.mySwiper', {
