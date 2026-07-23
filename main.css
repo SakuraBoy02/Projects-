@@ -2,6 +2,10 @@
 
 body {
 font-family: "Aboreto", system-ui;
+background-image: url("./Photo/138949475_354f086c-93a6-4099-8327-9c189899d13e\ 1.png");
+/* border-radius: 30px; */
+background-repeat:no-repeat;
+background-size: cover;
  /* font-family: "Advent Pro", sans-serif;*/ 
    /*font-family: "Hurricane", cursive;*/
   background-color: #fdeae3;
@@ -109,7 +113,7 @@ ul {
 
 .welcome {
 height: 100vh;
-background-image: url("./Photo/138949475_354f086c-93a6-4099-8327-9c189899d13e\ 1.png");
+/* background-image: url("./Photo/138949475_354f086c-93a6-4099-8327-9c189899d13e\ 1.png"); */
 border-radius: 30px;
 background-repeat:no-repeat;
 background-size: cover;
@@ -190,8 +194,8 @@ padding-left: 170px
 
 .gallery {
 display: grid;
-grid-template-columns: 280px 400px 280px;
-grid-template-rows: 270px 270px;
+grid-template-columns: 380px 500px 380px;
+grid-template-rows: 370px 370px;
 
 gap: 20px;
 
@@ -360,11 +364,5 @@ margin: 0px;
   justify-content: center;
   font-size: 36px;
   padding-top: 25px;
+  padding-bottom: 100px;
 }
-
-
-
-
-
-
-
