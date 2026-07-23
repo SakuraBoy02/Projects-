@@ -52,9 +52,9 @@ var swiper = new Swiper('.mySwiper', {
           modifier: 2.5,
           slideShadows: true,
         },
-        pagination: {
-          el: '.swiper-pagination',
-        },
+        // pagination: {
+        //   el: '.swiper-pagination',
+        // },
         // autoplay:{
         //     delay:2000,
         //     disableOnInteraction:false,

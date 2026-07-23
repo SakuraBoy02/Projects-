@@ -305,6 +305,7 @@ img {
 }
 
 .collection{
+  
   height: 100%;
   /* background-color: #1e232e; */
   display: flex;
@@ -320,6 +321,7 @@ img {
   border-radius: 25px;
   overflow: hidden;
   padding: .3rem;
+  cursor:pointer;
 }
 
 .content img{
@@ -362,6 +364,6 @@ margin: 0px;
   display: flex;
   justify-content: center;
   font-size: 36px;
-  /* padding-top: 25px; */
-  padding-bottom: 100px;
+  padding-top: 25px;
+  /* padding-bottom: 100px; */
 }
