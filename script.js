@@ -58,8 +58,8 @@ var swiper = new Swiper('.mySwiper', {
           rotate: 0,
           stretch: 40,
           depth: 100,
-          modifier: 1,
-          slideShadows: false,
+          modifier: 2.5,
+          slideShadows: true,
         },
         // pagination: {
         //   el: '.swiper-pagination',
