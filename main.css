@@ -313,6 +313,23 @@ img {
   align-items: center;
 }
 
+/* .swiper-slide {
+    border: 3px solid red !important;
+    width: 29rem !important;
+}
+
+.swiper-slide-active {
+    border: 3px solid lime !important;
+} */
+
+.swiper-wrapper {
+    pointer-events: none;
+}
+
+.swiper-slide {
+    pointer-events: auto;
+}
+
 .collection .content{
   width: 29rem;
   color: #4c4848;
@@ -321,13 +338,14 @@ img {
   border-radius: 25px;
   overflow: hidden;
   padding: .3rem;
-  cursor:pointer;
+  cursor:grab;
 }
 
 .content img{
   width: 99%;
   border-radius: 25px;
   border: .2rem solid #ffbe98;
+  cursor:pointer;
 }
 
 .text-content{

@@ -32,12 +32,21 @@
 //     })
 // });
 
-document.getElementById('btn_repeat').addEventListener('click', () => {
+document.querySelectorAll('.swiper-slide').forEach(slide => {
+    console.log(
+        slide,
+        getComputedStyle(slide).cursor
+    );
+});
+
+document.querySelectorAll('.repeat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
     window.location.href = 'index.html';
+  });
 });
 var swiper = new Swiper('.mySwiper', {
         effect: 'coverflow',
-        grabCursor: true,
+        grabCursor: false,
         centeredSlides: true,
 
         slidesPerView: 'auto',
@@ -47,10 +56,10 @@ var swiper = new Swiper('.mySwiper', {
         
         coverflowEffect: {
           rotate: 0,
-          stretch: 0,
+          stretch: 40,
           depth: 100,
-          modifier: 2.5,
-          slideShadows: true,
+          modifier: 1,
+          slideShadows: false,
         },
         // pagination: {
         //   el: '.swiper-pagination',
