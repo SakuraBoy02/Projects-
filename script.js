@@ -74,19 +74,19 @@ const modal = document.getElementById('modal');
 
 document.querySelectorAll('.content').forEach(card => {
   card.addEventListener('click', () => {
-    console.log('Клик по карточке');
     modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
   });
 });
 
 const closeBtn = document.querySelector('.close-btn');
 closeBtn.addEventListener('click', () => {
-  
   modal.classList.remove('active');
+  document.body.style.overflow = 'auto';
 });
 
 modal.addEventListener('click', (event) =>{
   if (event.target === modal){
-    modal.classList.remove('active')
+    modal.classList.remove('active');
   }
 });
