@@ -350,6 +350,7 @@ img {
 
 .text-content{
   display: flex;
+  text-align: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -384,4 +385,46 @@ margin: 0px;
   font-size: 36px;
   padding-top: 25px;
   /* padding-bottom: 100px; */
+}
+
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background: rgba(0, 0, 0, 0.7);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.modal-window{
+  height: 80%;
+  width: 90%;
+  max-width: 90%;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+.close-btn{
+  height: 30px;
+  width: 30px;
+  /* position:absolute; */
+  top: 10px;
+  left: 10px;
+  border: none;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.modal-overlay.active{
+  opacity: 1;
+  visibility: visible;
 }

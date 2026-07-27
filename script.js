@@ -33,39 +33,60 @@
 // });
 
 document.querySelectorAll('.swiper-slide').forEach(slide => {
-    console.log(
-        slide,
-        getComputedStyle(slide).cursor
-    );
+  console.log(
+    slide,
+    getComputedStyle(slide).cursor
+  );
 });
 
-document.querySelectorAll('.repeat-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    window.location.href = 'index.html';
+// document.querySelectorAll('.repeat-btn').forEach(btn => {
+//   btn.addEventListener('click', () => {
+//     window.location.href = 'index.html';
+//   });
+// });
+var swiper = new Swiper('.mySwiper', {
+  effect: 'coverflow',
+  grabCursor: false,
+  centeredSlides: true,
+
+  slidesPerView: 'auto',
+  // loop: true,
+  // loopAdditionalSlides: 1,
+
+
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 40,
+    depth: 100,
+    modifier: 2.5,
+    slideShadows: true,
+  },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  // },
+  // autoplay:{
+  //     delay:2000,
+  //     disableOnInteraction:false,
+  // }
+});
+
+const modal = document.getElementById('modal');
+
+document.querySelectorAll('.content').forEach(card => {
+  card.addEventListener('click', () => {
+    console.log('Клик по карточке');
+    modal.classList.add('active');
   });
 });
-var swiper = new Swiper('.mySwiper', {
-        effect: 'coverflow',
-        grabCursor: false,
-        centeredSlides: true,
 
-        slidesPerView: 'auto',
-        // loop: true,
-        // loopAdditionalSlides: 1,
-        
-        
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 40,
-          depth: 100,
-          modifier: 2.5,
-          slideShadows: true,
-        },
-        // pagination: {
-        //   el: '.swiper-pagination',
-        // },
-        // autoplay:{
-        //     delay:2000,
-        //     disableOnInteraction:false,
-        // }
-      });
+const closeBtn = document.querySelector('.close-btn');
+closeBtn.addEventListener('click', () => {
+  
+  modal.classList.remove('active');
+});
+
+modal.addEventListener('click', (event) =>{
+  if (event.target === modal){
+    modal.classList.remove('active')
+  }
+});
