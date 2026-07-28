@@ -431,3 +431,14 @@ margin: 0px;
   opacity: 1;
   visibility: visible;
 }
+
+.gallery-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-photo{
+    width: 100%;
+    border-radius: 15px;
+}

@@ -32,6 +32,82 @@
 //     })
 // });
 
+const galleries = {
+  village:[
+    './Photo/5354799430785243331Калининград.jpg',
+    './Photo/5354799430785243334Калининград.jpg',
+    './Photo/5354799430785243380Калининград.jpg',
+    './Photo/5354799430785243472Калининград.jpg',
+    './Photo/5355020282298571484Калининград.jpg',
+    './Photo/5357554643715692390Калининград.jpg',
+    './Photo/5357554643715692415Калининград.jpg',
+    './Photo/5357554643715692437Калининград.jpg',
+    './Photo/5357554643715692449Калининград.jpg'
+  ],
+
+  kaliningrad:[
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg'
+  ],
+
+  zelenogradsk:[
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg'
+  ],
+
+  sakura:[
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg'
+  ],
+
+  okeanarium:[
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg'
+  ],
+
+  beardrick:[
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg',
+    './Photo/.jpg'
+  ]
+}
+
+
+
 document.querySelectorAll('.swiper-slide').forEach(slide => {
   console.log(
     slide,
@@ -50,6 +126,7 @@ var swiper = new Swiper('.mySwiper', {
   centeredSlides: true,
 
   slidesPerView: 'auto',
+  initialSlide: 2,
   // loop: true,
   // loopAdditionalSlides: 1,
 
@@ -65,15 +142,26 @@ var swiper = new Swiper('.mySwiper', {
   //   el: '.swiper-pagination',
   // },
   // autoplay:{
-  //     delay:2000,
+  //     delay:5000,
   //     disableOnInteraction:false,
   // }
 });
 
 const modal = document.getElementById('modal');
+const galleryContainer = document.querySelector('.gallery-container')
 
 document.querySelectorAll('.content').forEach(card => {
   card.addEventListener('click', () => {
+
+    const galleryId = card.dataset.gallery;
+    galleryContainer.innerHTML = '';
+    galleries[galleryId].forEach(photo => {
+      const img = document.createElement('img');
+      img.src = photo;
+      img.classList.add('modal-photo');
+      galleryContainer.appendChild(img);
+    });
+
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   });
