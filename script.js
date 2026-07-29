@@ -34,75 +34,83 @@
 
 const galleries = {
   village:[
-    './Photo/5354799430785243331Калининград.jpg',
-    './Photo/5354799430785243334Калининград.jpg',
-    './Photo/5354799430785243380Калининград.jpg',
-    './Photo/5354799430785243472Калининград.jpg',
-    './Photo/5355020282298571484Калининград.jpg',
-    './Photo/5357554643715692390Калининград.jpg',
-    './Photo/5357554643715692415Калининград.jpg',
-    './Photo/5357554643715692437Калининград.jpg',
-    './Photo/5357554643715692449Калининград.jpg'
+    
+    {src: "./Photo/.jpg", big: true},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: true},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false}
   ],
 
   kaliningrad:[
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg'
+    // {title: "Our trip in Kaliningrad"},
+    {src: "./Photo/5354799430785243331Калининград.jpg", big: true},
+    {src: "./Photo/5354799430785243334Калининград.jpg", big: false},
+    {src: "./Photo/5354799430785243380Калининград.jpg", big: false},
+    {src: "./Photo/5354799430785243472Калининград.jpg", big: false},
+    {src: "./Photo/5355020282298571484Калининград.jpg", big: true},
+    {src: "./Photo/5357554643715692390Калининград.jpg", big: false},
+    {src: "./Photo/5357554643715692415Калининград.jpg", big: false},
+    {src: "./Photo/5357554643715692437Калининград.jpg", big: false},
+    {src: "./Photo/5357554643715692449Калининград.jpg", big: false},
+    {src: "./Photo/5357554643715692535Калининград.jpg", big: false}
   ],
 
   zelenogradsk:[
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg'
+    {src: "./Photo/.jpg", big: true},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: true},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false}
   ],
 
   sakura:[
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg'
+    {src: "./Photo/.jpg", big: true},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: true},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false}
   ],
 
   okeanarium:[
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg'
+    {src: "./Photo/.jpg", big: true},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: true},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false}
   ],
 
   beardrick:[
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg',
-    './Photo/.jpg'
+    {src: "./Photo/.jpg", big: true},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: true},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false},
+    {src: "./Photo/.jpg", big: false}
   ]
 }
 
@@ -157,8 +165,13 @@ document.querySelectorAll('.content').forEach(card => {
     galleryContainer.innerHTML = '';
     galleries[galleryId].forEach(photo => {
       const img = document.createElement('img');
-      img.src = photo;
+      img.src = photo.src;
       img.classList.add('modal-photo');
+
+      if(photo.big){
+        img.classList.add('gallery-big');
+      }
+
       galleryContainer.appendChild(img);
     });
 
@@ -177,4 +190,21 @@ modal.addEventListener('click', (event) =>{
   if (event.target === modal){
     modal.classList.remove('active');
   }
+});
+
+const viewer = document.getElementById('imageViewer');
+const viewerImage = document.getElementById('viewerImage');
+
+document.addEventListener('click', e => {
+
+    if(e.target.classList.contains('modal-photo')){
+
+        viewerImage.src = e.target.src;
+        viewer.classList.add('active');
+    }
+
+});
+
+viewer.addEventListener('click', () => {
+    viewer.classList.remove('active');
 });
