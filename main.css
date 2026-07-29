@@ -6,12 +6,16 @@ background-image: url("./Photo/138949475_354f086c-93a6-4099-8327-9c189899d13e\ 1
 /* border-radius: 30px; */
 background-repeat:no-repeat;
 background-size: cover;
- /* font-family: "Advent Pro", sans-serif;*/ 
-   /*font-family: "Hurricane", cursive;*/
   background-color: #fdeae3;
   color: #000;  
   margin: 0;
   padding: 0;
+}
+
+h4{
+  width: 40%;
+  text-indent: 1.5em;
+  font-weight: 400;
 }
 
 a {
@@ -28,7 +32,6 @@ ul {
 
 .container {
   max-width: 1400;
-
 }
 
 .header {
@@ -373,7 +376,7 @@ margin: 0px;
 .separator_start{
   display: flex;
   justify-content: center;
-  font-size: 36px;
+  font-size: 48px;
   padding-top: 25px;
   /* padding-bottom: 100px; */
 }
@@ -480,4 +483,24 @@ margin: 0px;
     max-height: 95vh;
 
     object-fit: contain;
+}
+
+
+
+.start-card{
+  font-family: "Hurricane", cursive;
+  font-size: 36px;
+  font-weight: 400;
+  padding: 2%;
+  gap: 80px;
+  display: flex;
+  justify-content: center;
+  direction: row;
+  
+}
+
+.start-card img{
+  height: 750px;
+  margin-left: -300px;
+  border-radius: 25px;
 }
