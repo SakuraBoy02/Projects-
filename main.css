@@ -12,10 +12,15 @@ background-size: cover;
   padding: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 h4{
-  width: 40%;
+  width: 730px;
   text-indent: 1.5em;
   font-weight: 400;
+  padding-left: 100px;
 }
 
 a {
@@ -503,4 +508,5 @@ margin: 0px;
   height: 750px;
   margin-left: -300px;
   border-radius: 25px;
+  margin-left: 80px;
 }
