@@ -23,7 +23,7 @@ html {
   padding-left: 100px;
 } */
 
-p{
+p {
   margin: 0;
 }
 
@@ -395,19 +395,19 @@ img {
   /* padding-bottom: 100px; */
 }
 
-#Started{
+#Started {
   scroll-margin-top: 83px;
 }
 
-#Started2{
+#Started2 {
   scroll-margin-top: 83px;
 }
 
-#Started3{
+#Started3 {
   scroll-margin-top: 83px;
 }
 
-#Started4{
+#Started4 {
   scroll-margin-top: 83px;
 }
 
@@ -515,7 +515,7 @@ img {
   object-fit: contain;
 }
 
-h4{
+h4 {
   max-width: 700px;
   font-family: "Hurricane", cursive;
   font-size: 60px;
@@ -553,7 +553,7 @@ h4{
   object-fit: cover;
 }
 
-.start-card-story{
+.start-card-story {
   grid-column: 2;
   grid-row: 1;
   display: flex;
@@ -563,7 +563,7 @@ h4{
   /* text-align: center; */
 }
 
-.start-card-story p{
+.start-card-story p {
   text-indent: 2em;
   max-width: 550px;
   font-size: 36px;
@@ -573,7 +573,7 @@ h4{
   /* margin-bottom: 30px; */
 }
 
-.start-quote{
+.start-quote {
   grid-column: 2;
   grid-row: 2;
   display: flex;
@@ -581,7 +581,7 @@ h4{
   align-items: center;
 }
 
-.start-quote p{
+.start-quote p {
   text-indent: 2em;
   text-align: center;
   font-size: 68px;
@@ -596,43 +596,80 @@ h4{
 .advantages {
   max-width: 1400px;
   margin: 60px auto;
-  
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
   gap: 20px;
   padding: 15px;
-
-
 }
 
 .advantages-img {
+  /* z-index: 100; */
+  width: 300px;
+  height: 350px;
+  
+  border-radius: 25px;
+}
+
+.advantages-img:hover > .advantages-card{
+  cursor: pointer;
+  transform: rotateY(180deg)
+}
+
+.advantages-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+  
+}
+
+h5{
+  
+  font-family: "Aboreto", system-ui;  
+  color: rgb(60, 57, 57);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.advantages-card--front,
+.advantages-card--back {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  border-radius: 25px;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.advantages-card--front img{
+  height: 100%;
+  width: 100%;
+  
+  background-size: cover;
   border-radius: 25px;
 }
 
-.advantages-img img {
-  width: 300px;
-  height: 350px;
-  object-fit: cover;
-  display: block;
-  border-radius: 25px;
+/* .advantages-card--front{
+  background-image: url(./Photo/5359815939702070985Зеленоградск.jpg);
+  background-size: cover;
+} */
+
+.advantages-card--back{
+  
+  background-color: #ffbe98;
+  transform: rotateY(180deg);
 
 }
 
-.advantages-grid--center-top {
+/* .advantages-grid--center-top {
   grid-column: 2;
   grid-row: 1;
-}
-
-.advantages-grid--left-top {}
-
-.advantages-grid--right-top {}
-
-.advantages-grid--left-bottom {}
-
-.advantages-grid--center-bottom {}
-
-.advantages-grid--right-bottom {}
+} */
