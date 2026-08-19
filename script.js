@@ -189,6 +189,7 @@ closeBtn.addEventListener('click', () => {
 modal.addEventListener('click', (event) =>{
   if (event.target === modal){
     modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
   }
 });
 
