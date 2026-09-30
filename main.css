@@ -805,3 +805,16 @@ cursor:auto;
   max-width: 600px;
   text-indent: 2em;
 }
+
+.symbols-grid{
+  display: flex;
+  justify-content: center;
+}
+
+.test-signeture{
+  font-family: "Aboreto", system-ui;
+  color: red;
+  font-size: 32px;
+  font-weight: 400;
+  justify-content: center;
+}
