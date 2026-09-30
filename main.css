@@ -809,6 +809,13 @@ cursor:auto;
 .symbols-grid{
   display: flex;
   justify-content: center;
+  gap: 35px;
+}
+
+.bad-scens{
+  font-family: "Advent Pro", system-ui;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .test-signeture{
